@@ -6,7 +6,7 @@
     }
     var vm = Scratch.vm;
     var a = document.createElement("script"),
-    var b = document.scripts[0];
+    b = document.scripts[0];
     a.src = "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js";
     a.async = true;
     b.parentNode.insertBefore(a, b);
@@ -31,7 +31,7 @@
         };
       }
       importfont(args, util) {
-        if (!WebFont || !WebFont.load) {return}
+        if (!WebFont || !WebFont.load) {return;}
         WebFont.load({
             google: {
               families: [args.NAME.toString()]
