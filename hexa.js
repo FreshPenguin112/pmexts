@@ -40,7 +40,7 @@
                   type: Scratch.ArgumentType.STRING,
                   defaultValue: "Hello, World!"
                 }
-              },
+              }},
               {
                 opcode: 'decompress',
                 blockType: Scratch.BlockType.REPORTER,
@@ -50,7 +50,7 @@
                     type: Scratch.ArgumentType.STRING,
                     defaultValue: "҅〶惶̀Ў꤁㦀☄∀"
                   }
-                }]
+                }}]
             };
           }
           base91_encode(input) {
