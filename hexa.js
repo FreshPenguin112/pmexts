@@ -40,7 +40,32 @@
               defaultValue: ">OwJh>}AQ;r@@Y?F"
             }
           }
-        }]
+        },
+          {
+            opcode: 'compress',
+            blockType: Scratch.BlockType.REPORTER,
+            text: 'super compress [TEXT]',
+            arguments:
+            {
+            TEXT:
+            {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: "Hello, World!"
+            }
+            },
+            {
+            opcode: 'decompress',
+            blockType: Scratch.BlockType.REPORTER,
+            text: 'super decompress [TEXT]',
+            arguments:
+            {
+            TEXT:
+            {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: "҅〶惶̀Ў꤁㦀☄∀"
+            }
+            }
+            ]
       };
     }
     base91_encode(input)
@@ -127,6 +152,10 @@
     {
       return this.base91_decode(args.TEXT.toString());
     }
+    compress(args, util) {
+      return LZString.compress(args.TEXT.toString)}
+    decompress(args, util) {
+      return LZString.decompress(args.TEXT.toString)}
   }
   Scratch.extensions.register(new b91());
 })(Scratch);
