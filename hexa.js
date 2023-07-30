@@ -4,7 +4,7 @@
     throw new Error('This Extension Must Run Unsandboxed');
   }
   const vm = Scratch.vm
-  var s = document.createElement('script');s.src = 'https://raw.githubusercontent.com/FreshPenguin112/filehsotigjnt/main/brotli.js';const { compress,decompress } = (new window.brotli())})
+  var s = document.createElement('script');s.src = 'https://raw.githubusercontent.com/FreshPenguin112/filehsotigjnt/main/brotli.js';const { compress,decompress } = (new window.brotli())
   const encodingChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,./:;<=>?@[]^_\`{|}~\'\"';
   class hex {
     getInfo() {
