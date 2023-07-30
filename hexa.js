@@ -129,10 +129,10 @@
       return this.base91_decode(args.TEXT.toString());
     }
     compressf(args, util) {
-      return compress(args.TEXT.toString)
+      return z.compress(args.TEXT.toString)
     }
     decompressf(args, util) {
-      return decompress(args.TEXT.toString)
+      return z.decompress(args.TEXT.toString)
     }
   }
   Scratch.extensions.register(new hex());
