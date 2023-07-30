@@ -4,7 +4,7 @@
     throw new Error('This Extension Must Run Unsandboxed');
   }
   const vm = Scratch.vm
-  document.body.appendChild(document.createElement('script')).src = 'https://unpkg.com/brotli-wasm@2.0.0/pkg.web/brotli_wasm.js';
+  document.body.appendChild(document.createElement('script')).src = 'https://raw.githubusercontent.com/FreshPenguin112/filehsotigjnt/main/brotli.min.js';
   const encodingChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,./:;<=>?@[]^_\`{|}~\'\"';
   class hex {
     getInfo() {
