@@ -4,9 +4,10 @@
     throw new Error('This Extension Must Run Unsandboxed');
   }
   const vm = Scratch.vm
+  async function l(){
   var r = await fetch('https://cdn.jsdelivr.net/gh/pieroxy/lz-string/libs/lz-string.min.js');
   var t = await response.text();
-  eval(t.toString()+'window.compress=LZString.compress;window.decompress=LZString.decompress;')
+  eval(t.toString()+'window.compress=LZString.compress;window.decompress=LZString.decompress;')}l();
   const encodingChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,./:;<=>?@[]^_\`{|}~\'\"';
   class hex {
     getInfo() {
