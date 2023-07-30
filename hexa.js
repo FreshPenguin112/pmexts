@@ -4,7 +4,7 @@
     throw new Error('This Extension Must Run Unsandboxed');
   }
   const vm = Scratch.vm
-  var s = document.createElement('script');s.src = 'https://raw.githubusercontent.com/FreshPenguin112/filehsotigjnt/main/brotli.js';s.onload = () => {var { compressf,decompressf } = brotli()}
+  var s = document.createElement('script');s.src = 'https://raw.githubusercontent.com/FreshPenguin112/filehsotigjnt/main/brotli.js';s.onload = (function(){const { compress,decompress } = brotli()})
   const encodingChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,./:;<=>?@[]^_\`{|}~\'\"';
   class hex {
     getInfo() {
@@ -32,7 +32,7 @@
               }
             }
             }, {
-            opcode: 'compress',
+            opcode: 'compressf',
             blockType: Scratch.BlockType.REPORTER,
             text: 'super compress [TEXT]',
             arguments: {
@@ -44,7 +44,7 @@
           },
 
           {
-            opcode: 'decompress',
+            opcode: 'decompressf',
             blockType: Scratch.BlockType.REPORTER,
             text: 'super decompress [TEXT]',
             arguments: {
@@ -124,11 +124,11 @@
     decode(args, util) {
       return this.base91_decode(args.TEXT.toString());
     }
-    compress(args, util) {
-      return compressf(args.TEXT.toString)
+    compressf(args, util) {
+      return compress(args.TEXT.toString)
     }
-    decompress(args, util) {
-      return decompressf(args.TEXT.toString)
+    decompressf(args, util) {
+      return decompress(args.TEXT.toString)
     }
   }
   Scratch.extensions.register(new hex());
