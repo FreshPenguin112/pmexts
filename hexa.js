@@ -4,8 +4,8 @@
     throw new Error('This Extension Must Run Unsandboxed');
   }
   const vm = Scratch.vm
-  document.body.appendChild(document.createElement('script')).src = 'https://raw.githubusercontent.com/dominikhlbg/brotlijs/master/brotli.js';
-  const brotli = new window.Brotli()
+  document.body.appendChild(document.createElement('script')).src = 'https://raw.githubusercontent.com/FreshPenguin112/filehsotigjnt/main/brotli.js';
+  const { compressf,decompressf } = window.brotli()
   const encodingChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,./:;<=>?@[]^_\`{|}~\'\"';
   class hex {
     getInfo() {
@@ -126,10 +126,10 @@
       return this.base91_decode(args.TEXT.toString());
     }
     compress(args, util) {
-      return brotli.compress(args.TEXT.toString)
+      return compressf(args.TEXT.toString)
     }
     decompress(args, util) {
-      return brotli.decompress(args.TEXT.toString)
+      return decompressf(args.TEXT.toString)
     }
   }
   Scratch.extensions.register(new hex());
