@@ -5,7 +5,6 @@
   }
   const vm = Scratch.vm
   var s = document.createElement('script');s.src = 'https://raw.githubusercontent.com/FreshPenguin112/filehsotigjnt/main/brotli.js';s.onload = () => {var { compressf,decompressf } = brotli()}
-  
   const encodingChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,./:;<=>?@[]^_\`{|}~\'\"';
   class hex {
     getInfo() {
