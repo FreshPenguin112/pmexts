@@ -4,7 +4,7 @@
     throw new Error('This Extension Must Run Unsandboxed');
   }
   const vm = Scratch.vm
-  document.body.appendChild(document.createElement('script')).src = 'https://unpkg.com/lz-string';
+  document.body.appendChild(document.createElement('script')).src = 'https://unpkg.com/brotli-wasm@2.0.0/pkg.web/brotli_wasm.js';
   const encodingChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,./:;<=>?@[]^_\`{|}~\'\"';
   class hex {
     getInfo() {
@@ -125,10 +125,10 @@
       return this.base91_decode(args.TEXT.toString());
     }
     compress(args, util) {
-      return LZString.compress(args.TEXT.toString)
+      return brotli.compress(args.TEXT.toString)
     }
     decompress(args, util) {
-      return LZString.decompress(args.TEXT.toString)
+      return brotli.decompress(args.TEXT.toString)
     }
   }
   Scratch.extensions.register(new hex());
